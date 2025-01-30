@@ -50,18 +50,6 @@ const MyApp: AppType<{ session: Session | null }> = ({
         <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5" />
         <link rel="shortcut icon" href="/favicon.ico" />
 
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content="https://splitpro.app" />
-        <meta name="twitter:title" content="SplitPro" />
-        <meta name="twitter:description" content="Split Expenses with your friends for free" />
-        <meta name="twitter:image" content="https://splitpro.app/og_banner.png" />
-        <meta name="twitter:creator" content="@KM_Koushik_" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="SplitPro" />
-        <meta property="og:description" content="Split Expenses with your friends for free" />
-        <meta property="og:site_name" content="SplitPro" />
-        <meta property="og:url" content="https://splitpro.app" />
-        <meta property="og:image" content="https://splitpro.app/og_banner.png" />
       </Head>
       <SessionProvider session={session}>
         <ThemeProvider attribute="class" defaultTheme="dark">
