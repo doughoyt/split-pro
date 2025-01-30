@@ -87,7 +87,7 @@ export const SelectUserOrGroup: React.FC<{
                 : null}
             </div>
           ) : (
-            <div>Note: sending invite is disabled for now because of spam</div>
+            <div></div>
           )}
         </div>
         <div className="flex justify-center gap-4">

@@ -128,7 +128,7 @@ const AddMembers: React.FC<{
                 instead. Your account will be blocked if this feature is misused
               </div>
             ) : (
-              <div>Note: sending invite is disabled for now because of spam</div>
+              <div></div>
             )}
 
             <div className="flex justify-center gap-4">
