@@ -108,34 +108,6 @@ const AccountPage: NextPageWithUser = ({ user }) => {
                 </p>
               </div>
             </AppDrawer>
-            <Button
-              variant="ghost"
-              className="text-md w-full justify-between px-0 hover:text-foreground/80"
-              onClick={downloadData}
-              disabled={downloading}
-            >
-              <div className="flex items-center gap-4">
-                <FileDown className="h-5 w-5 text-teal-500" />
-                Download splitpro data
-              </div>
-              {downloading ? (
-                <LoadingSpinner />
-              ) : (
-                <ChevronRight className="h-6 w-6 text-gray-500" />
-              )}
-            </Button>
-            <Link href="/import-splitwise">
-              <Button
-                variant="ghost"
-                className="text-md w-full justify-between px-0 hover:text-foreground/80"
-              >
-                <div className="flex items-center gap-4">
-                  <DownloadCloud className="h-5 w-5 text-violet-500" />
-                  Import from Splitwise
-                </div>
-                <ChevronRight className="h-6 w-6 text-gray-500" />
-              </Button>
-            </Link>
           </div>
 
           <div className="mt-2 flex justify-center">
