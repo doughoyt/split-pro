@@ -1,7 +1,7 @@
 FROM node:20.11.1-alpine AS base
 ENV SKIP_ENV_VALIDATION="true"
 ENV DOCKER_OUTPUT=1
-ENV NEXT_TELEMETRY_DISABLED 1
+ENV NEXT_TELEMETRY_DISABLED=1
 
 RUN apk add --no-cache libc6-compat
 RUN apk update
@@ -17,7 +17,7 @@ COPY . .
 RUN pnpm generate
 RUN pnpm build
 
-FROM node:20-alpine3.19 as release
+FROM node:20-alpine3.19 AS release
 WORKDIR /app
 RUN npm i -g pnpm@8.9
 
