@@ -17,18 +17,6 @@ import { NotificationModal } from '~/components/NotificationModal';
 import { GetServerSideProps } from 'next';
 
 const BalancePage: NextPageWithUser = () => {
-  function shareWithFriends() {
-    if (navigator.share) {
-      navigator
-        .share({
-          title: 'SplitPro',
-          text: "Check out SplitPro. It's an open source free alternative for Splitwise",
-          url: 'https://splitpro.app',
-        })
-        .then(() => console.log('Successful share'))
-        .catch((error) => console.log('Error sharing', error));
-    }
-  }
 
   const balanceQuery = api.user.getBalances.useQuery();
   const showProgress = useEnableAfter(350);
@@ -42,13 +30,7 @@ const BalancePage: NextPageWithUser = () => {
       <MainLayout
         title="Balances"
         actions={
-          typeof window !== 'undefined' && !!window.navigator?.share ? (
-            <Button variant="ghost" onClick={shareWithFriends}>
-              <ArrowUpOnSquareIcon className="h-6 w-6 " />
-            </Button>
-          ) : (
-            <div className="h-6 w-10" />
-          )
+          <div className="h-6 w-10" />
         }
       >
         <NotificationModal />
