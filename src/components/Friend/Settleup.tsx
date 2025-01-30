@@ -3,7 +3,7 @@ import { Button } from '../ui/button';
 import { AppDrawer, Drawer, DrawerClose, DrawerContent, DrawerTrigger } from '../ui/drawer';
 import { type User, type Balance, SplitType } from '@prisma/client';
 import { type User as NextUser } from 'next-auth';
-import { FriendBalance } from './FirendBalance';
+import { FriendBalance } from './FriendBalance';
 import { Input } from '../ui/input';
 import { UserAvatar } from '../ui/avatar';
 import { ArrowRightIcon } from 'lucide-react';
