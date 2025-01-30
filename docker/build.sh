@@ -17,10 +17,7 @@ echo "Git SHA: $GIT_SHA"
 
 docker build -f "$SCRIPT_DIR/Dockerfile" \
     --progress=plain \
-    -t "ossapps/splitpro:latest" \
-    -t "ossapps/splitpro:$GIT_SHA" \
-    -t "ossapps/splitpro:$APP_VERSION" \
-    -t "ghcr.io/oss-apps/splitpro:latest" \
-    -t "ghcr.io/oss-apps/splitpro:$GIT_SHA" \
-    -t "ghcr.io/oss-apps/splitpro:$APP_VERSION" \
+    -t "hub.odistel.com/splitpro:latest" \
+    -t "hub.odistel.com/splitpro:$GIT_SHA" \
+    -t "hub.odistel.com/splitpro:$APP_VERSION" \
     "$MONOREPO_ROOT"
