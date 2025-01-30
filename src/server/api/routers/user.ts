@@ -87,22 +87,11 @@ export const userRouter = createTRPCRouter({
   }),
 
   getFriends: protectedProcedure.query(async ({ ctx }) => {
-    const balanceWithFriends = await db.balance.findMany({
-      where: {
-        userId: ctx.session.user.id,
-      },
-      select: {
-        friendId: true,
-      },
-      distinct: ['friendId'],
-    });
-
-    const friendsIds = balanceWithFriends.map((f) => f.friendId);
 
     const friends = await db.user.findMany({
       where: {
         id: {
-          in: friendsIds,
+          notIn: [ctx.session.user.id],
         },
       },
     });
