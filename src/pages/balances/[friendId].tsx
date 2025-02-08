@@ -55,12 +55,6 @@ const FriendPage: NextPageWithUser = ({ user }) => {
             <p className="text-lg font-normal">{friendQuery.data?.name}</p>
           </div>
         }
-        actions={
-          <DeleteFriend
-            friendId={_friendId}
-            disabled={!(youLent?.length === 0 && youOwe?.length === 0)}
-          />
-        }
         header={
           <div className="flex w-full items-center justify-between">
             <div className="flex items-center gap-2">
